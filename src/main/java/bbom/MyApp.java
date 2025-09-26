@@ -10,6 +10,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+@Deprecated
+/**
+ * The original GUI application for the BBoM lab activity.
+ */
 public class MyApp extends JFrame  implements ActionListener {
 
 	private int state;

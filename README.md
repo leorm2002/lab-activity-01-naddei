@@ -2,24 +2,7 @@
 
 ## Lab Activity #01 - 20250926  
 
-- Main Topic: Software Architecture overview (module-1.2)
-  - Component & Connector (C&C) structure/view - [Lab Notes](https://docs.google.com/document/d/1oZprsaZiSVrp5gsNEKnNra0WQ4CWwGY7xwaf7X8YiXg/edit?usp=sharing)
-  - Case study: MVC architectural pattern (couple of slides available on Virtuale)
-- Practice  
-  - Applying MVC: Refactoring an existing unstructured program (a "BBoM") using the MVC architectural pattern
-	  - starting program: `bbom.MyApp`
-  - Represent the architecture with a C&C view
-  - Implement some extensions 
-	- adding a new output (view): a GUI 
-	- adding a new input: stdin
-	- adding concurrency: autonomous controller
-      - e.g. an active component repeatedly (every second) updating the model 
-	- adding distribution: a new remote view, based on a MOM or RMI
-
-
-
-
-		
-		
-		
-		
+The system has been rebuils as a fully MVC system.
+The M,V,C components have been decoupled from eachother by using interfaces (bbbom.interfaces package) and (manual) dependency injection pattern to gurantee isolation and interoperability of the components.
+Mulitple UIs and Model implementation have been developed thus enabling to really test the indipendency of component by swapping them freely.
+Also the concurrecy have been handled and multiple user interfaces (swig gui, cli, and a minimal socket interface) can coexists together.
